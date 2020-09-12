@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,22 +19,49 @@ export default function WorkSection() {
   const classes = useStyles();
 
   const [info, setInfo] = useState({
-    fullName: "edwin",
-    email: "@",
-    message: "///",
+    fullName: "",
+    email: "",
+    message: "",
     disabled: false,
     emailSent: null
   });
 
   const handleChange = (e) => {
+    let cinfo = {...info}
     const target = e.target;
     const value = e.type === 'checkbox' ? target.checked : target.value;
     const name = target.name
-    setInfo({[name]: value})  
+    cinfo[name]= value
+    setInfo(cinfo)
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     setInfo({disabled: true})
+
+    Axios.post('http://localhost:8080/api/email', info)
+      .then(res => {
+        if(res.data.success) {
+          console.log(res.data.success)
+          console.log("Worked!")
+        //   setInfo({
+        //     disabled: false,
+        //     emailSent: true
+        //   });
+        // } else {
+        //   setInfo({
+        //     disabled: false,
+        //     emailSent: false
+        //   });
+        }
+      })
+      .catch(err => {
+        console.log(err);
+
+        // setInfo({
+        //   disabled: false,
+        //   emailSent: false
+        // });
+      })
   };
 
   return (
@@ -51,6 +79,7 @@ export default function WorkSection() {
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  labelProps={{shrink: true}}
                   inputProps={{
                   onChange: handleChange,
                   value: info.fullName,
@@ -64,6 +93,7 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  labelProps={{shrink: true}}
                   inputProps={{
                   onChange: handleChange,
                   value: info.email,
@@ -76,6 +106,7 @@ export default function WorkSection() {
                 />
               </GridItem>
               <CustomInput
+                labelProps={{shrink: true}}
                 labelText="Your Message"
                 id="message"
                 formControlProps={{
