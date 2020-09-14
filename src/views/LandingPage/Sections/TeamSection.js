@@ -49,7 +49,7 @@ export default function TeamSection() {
                 <p className={classes.description}>
                 Hello again, I would like to bring my skills and work ethic to your company. 
                 Follow this link to <a href="/profile-page">here </a> or above to see more about me. 
-                Download my resume <a href="/">here</a> also.
+                Download my resume <a href="https://github.com/edwinsanch33/resume/raw/master/Edwin_Sanchez_Resume_2020.pdf">here</a> also.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
