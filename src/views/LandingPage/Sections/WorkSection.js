@@ -4,12 +4,14 @@ import Axios from 'axios';
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
+import Check from '@material-ui/icons/Check';
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
@@ -43,24 +45,24 @@ export default function WorkSection() {
         if(res.data.success) {
           console.log(res.data.success)
           console.log("Worked!")
-        //   setInfo({
-        //     disabled: false,
-        //     emailSent: true
-        //   });
-        // } else {
-        //   setInfo({
-        //     disabled: false,
-        //     emailSent: false
-        //   });
+          setInfo({
+            disabled: false,
+            emailSent: true
+          });
+        } else {
+          setInfo({
+            disabled: false,
+            emailSent: false
+          });
         }
       })
       .catch(err => {
         console.log(err);
 
-        // setInfo({
-        //   disabled: false,
-        //   emailSent: false
-        // });
+        setInfo({
+          disabled: false,
+          emailSent: false
+        });
       })
   };
 
@@ -68,12 +70,10 @@ export default function WorkSection() {
     <div id="contact" className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Work with us</h2>
+          <h2 className={classes.title}>Contact Me</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+            I look forward to hearing from you. 
+            If you would like to contact me please send me a message below.
           </h4>
           <form onSubmit={handleSubmit}>
             <GridContainer>
@@ -125,7 +125,8 @@ export default function WorkSection() {
                 <Button color="primary" type="submit" disabled={info.disabled}>Send Message</Button>
               </GridItem>
             </GridContainer>
-            {/* {emailSent === true && <} */}
+            {info.emailSent === true && <SnackbarContent  message={<span><b>ALERT:</b> EMAIL SENT!</span> } close color="success" icon={Check}/>}
+            {info.emailSent === true && <SnackbarContent  message={<span><b>ALERT:</b> EMAIL NOT SENT!</span> } close color="danger" icon="info_outline"/>}
           </form>
         </GridItem>
       </GridContainer>
