@@ -17,14 +17,13 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 
-// import profile from "assets/img/faces/christian.jpg";
 import profile from "assets/img/faces/GPPHeadshot.jpg"
 
-import work1 from "assets/img/examples/olu-eletu.jpg";
-import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
+import work1 from "assets/img/examples/FromUstoYou.png";
+import work2 from "assets/img/examples/GamepointLanding.png";
+import work3 from "assets/img/examples/happydog-home.png";
+import work4 from "assets/img/examples/searchbar-home.png";
+// import work5 from "assets/img/examples/clem-onojegaw.jpg";
 import hobbie1 from "assets/img/examples/Cleats:field.jpg";
 import hobbie2 from "assets/img/examples/Snowmass.jpg";
 import hobbie3 from "assets/img/examples/YanomamiTeam.jpg";
@@ -65,7 +64,7 @@ export default function ProfilePage(props) {
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    <img src={profile} alt="Edwin Profile" className={imageClasses} />
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>Edwin Sanchez</h3>
@@ -112,33 +111,57 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
+                            <div>
+                              <img
+                                alt="from us to you"
+                                src={work1}
+                                className={navImageClasses}
+                              />
+                              <div className={classes.projects}>
+                                {/* <Button color="info" size="sm" href="/">Visit Site</Button> */}
+                                <Button color="github" size="sm" href="https://github.com/poojarat/pt12-from-us-to-you" target="_blank">View Repo</Button>
+                              </div>
+                            </div>
+                            <div>
+                              <img
+                                alt="GPP"
+                                src={work2}
+                                className={navImageClasses}
+                                />
+                              <div className={classes.projects}>
+                                <Button color="info" size="sm" href="https://gamepointperformance.com/">Visit Site</Button>
+                                {/* <Button color="github" size="sm" href="/">View Repo</Button> */}
+                              </div>
+                            </div>
+                            <div>
+                              <img
+                                alt="happy dog 101"
+                                src={work3}
+                                className={navImageClasses}
+                              />
+                              <div className={classes.projects}>
+                                <Button color="info" size="sm" href="http://happydog101.herokuapp.com">Visit Site</Button>
+                                <Button color="github" size="sm" href="https://github.com/wyncode/darci_edwin_jajuan_syed">View Repo</Button>
+                              </div>
+                            </div>
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
+                            <div>
+                              <img
+                                alt="search-bar"
+                                src={work4}
+                                className={navImageClasses}
+                              />
+                              <div className={classes.projects}>
+                                <Button color="info" size="sm" href="https://the-search-bar.herokuapp.com">Visit Site</Button>
+                                <Button color="github" size="sm" href="https://github.com/wyncode/anthony_edwin_johan_sophia">View Repo</Button>
+                              </div>
+                            </div>
+                            {/* <img
                               alt="..."
                               src={work5}
                               className={navImageClasses}
-                            />
+                            /> */}
                           </GridItem>
                         </GridContainer>
                       )
