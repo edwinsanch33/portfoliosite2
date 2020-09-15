@@ -126,7 +126,7 @@ export default function WorkSection() {
               </GridItem>
             </GridContainer>
             {info.emailSent === true && <SnackbarContent  message={<span><b>ALERT:</b> EMAIL SENT!</span> } close color="success" icon={Check}/>}
-            {info.emailSent === true && <SnackbarContent  message={<span><b>ALERT:</b> EMAIL NOT SENT!</span> } close color="danger" icon="info_outline"/>}
+            {info.emailSent === false && <SnackbarContent  message={<span><b>ALERT:</b> EMAIL NOT SENT!</span> } close color="danger" icon="info_outline"/>}
           </form>
         </GridItem>
       </GridContainer>
