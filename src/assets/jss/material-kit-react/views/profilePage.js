@@ -56,7 +56,15 @@ const profilePageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
-  }
+  },
+  projects: {
+    transition: ".5s ease",
+    opacity: "0",
+    transform: "translate(-0%, -200%)",
+    "&:hover": {
+      opacity: "1"
+    }
+  },
 };
 
 export default profilePageStyle;
