@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c5a3ee5c.chunk.css",
+    "main.js": "/static/js/main.23c66d7d.chunk.js",
+    "main.js.map": "/static/js/main.23c66d7d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.47788c5d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.47788c5d.js.map",
+    "static/js/2.20bbaf1b.chunk.js": "/static/js/2.20bbaf1b.chunk.js",
+    "static/js/2.20bbaf1b.chunk.js.map": "/static/js/2.20bbaf1b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.07a4b34543b9aea63188c556923e012d.js": "/precache-manifest.07a4b34543b9aea63188c556923e012d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c5a3ee5c.chunk.css.map": "/static/css/main.c5a3ee5c.chunk.css.map",
+    "static/js/2.20bbaf1b.chunk.js.LICENSE.txt": "/static/js/2.20bbaf1b.chunk.js.LICENSE.txt",
+    "static/media/Cleats:field.jpg": "/static/media/Cleats:field.ad3d060b.jpg",
+    "static/media/Fixie.jpg": "/static/media/Fixie.a190a272.jpg",
+    "static/media/FromUstoYou.png": "/static/media/FromUstoYou.5e3ee71e.png",
+    "static/media/GPPHeadshot.jpg": "/static/media/GPPHeadshot.8abb9bcd.jpg",
+    "static/media/GamepointLanding.png": "/static/media/GamepointLanding.71234129.png",
+    "static/media/Snowmass.jpg": "/static/media/Snowmass.6c2afb84.jpg",
+    "static/media/YanomamiSolo.jpg": "/static/media/YanomamiSolo.3074f6b3.jpg",
+    "static/media/YanomamiTeam.jpg": "/static/media/YanomamiTeam.432a774e.jpg",
+    "static/media/happydog-home.png": "/static/media/happydog-home.aa91d7f1.png",
+    "static/media/landing-bg.jpg": "/static/media/landing-bg.df8fd3ef.jpg",
+    "static/media/profile-bg.jpg": "/static/media/profile-bg.baf6b40a.jpg",
+    "static/media/searchbar-home.png": "/static/media/searchbar-home.5c396c84.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47788c5d.js",
+    "static/js/2.20bbaf1b.chunk.js",
+    "static/css/main.c5a3ee5c.chunk.css",
+    "static/js/main.23c66d7d.chunk.js"
+  ]
+}
