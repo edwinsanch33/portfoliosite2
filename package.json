@@ -2,12 +2,13 @@
   "name": "portfolio-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "homepage": ".",
+  "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm install\" \"npm run server\" \"npm run client\"",
-    "client": "cd client && npm install && npm run start", 
-    "server": "node server.js",
-    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
+    "start": "nodemon index.js ",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edwin Sanchez",

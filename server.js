@@ -10,6 +10,7 @@ const port = process.env.PORT || 8080
 const sendGrid = require('@sendGrid/mail');
 
 const app = express();
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -23,8 +24,14 @@ app.use((req,res, next) => {
   next();
 });
 
+app.use(express.static(path.join(__dirname, 'build')));
+
 app.get('/api', (req, res, next) => {
   res.send('API Status: Running Running and Running Running')
+});
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post('/api/email', (req, res, next) => {
