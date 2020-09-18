@@ -7,7 +7,7 @@ const cors = require('cors');
 const port = process.env.PORT || 8080
 
 
-const sendGrid = require('@sendGrid/mail');
+const sendGrid = require('@sendgrid/mail');
 
 const app = express();
 const path = require('path');

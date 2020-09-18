@@ -10,6 +10,7 @@
     "@material-ui/icons": "4.9.1",
     "@mdi/js": "^5.5.55",
     "@mdi/react": "^1.4.0",
+    "@sendgrid/mail": "^7.2.6",
     "axios": "^0.20.0",
     "classnames": "2.2.6",
     "history": "4.10.1",
