@@ -40,7 +40,7 @@ export default function WorkSection() {
     e.preventDefault();
     setInfo({disabled: true})
 
-    Axios.post('http://localhost:8080/api/email', info)
+    Axios.post('http://www.edwin-sanchez.app/api/email', info)
       .then(res => {
         if(res.data.success) {
           console.log(res.data.success)

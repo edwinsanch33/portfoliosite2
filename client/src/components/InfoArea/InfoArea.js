@@ -48,7 +48,6 @@ export default function InfoArea(props) {
       <div className={classes.descriptionWrapper}>
         <h4 className={classes.title}>{title}</h4>
         {description.map((item,index) => <li key={index} className={classes.description}>{item}</li>)}
-        {/* <p className={classes.description}>{description}</p> */}
       </div>
     </div>
   );
