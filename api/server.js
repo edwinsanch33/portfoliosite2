@@ -1,9 +1,11 @@
 require('dotenv').config();
+const {secrets} = require('./sendgridkey')
 
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const cors = require('cors');
+
 const port = process.env.PORT || 8080
 
 
@@ -38,7 +40,7 @@ app.post('/api/email', (req, res, next) => {
 
   console.log(req.body);
 
-  sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
+  sendGrid.setApiKey(secrets);
   const msg = {
     to: 'edwinsanch33@gmail.com',
     from: req.body.email,

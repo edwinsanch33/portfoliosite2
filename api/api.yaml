@@ -1,2 +1,5 @@
 runtime: nodejs10
 service: api
+
+# env_variables:
+#   SENDGRID_KEY: "SENGRID_API_KEY" 
